@@ -1,0 +1,12 @@
+%h1 Restaurants#index
+%p Find me in app/views/restaurants/show.html.erb
+-@restaurants.each do |restaurant|
+  名前：
+  =link_to restaurant.name, restaurant_path(restaurant)
+  %br
+  =link_to '編集する', edit_restaurant_path(restaurant)
+  =link_to '削除する', restaurant_path(restaurant), method: :delete, data: {confirm: '本当に削除しますか？'}
+  %br
+
+  %hr
+=link_to '新規登録', new_restaurant_path

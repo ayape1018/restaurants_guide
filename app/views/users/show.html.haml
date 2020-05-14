@@ -1,0 +1,19 @@
+%h1 Users#show
+%p Find me in app/views/users/show.html.haml
+名前：
+=@user.full_name
+%br
+メールアドレス：
+=@user.email
+%br
+住所：
+=@user.address
+%br
+電話番号：
+=@user.tel
+%hr
+=link_to '編集する', edit_user_path(@user)
+%br
+=link_to '削除する', user_path(@user), method: :delete, data: {confirm: '本当に削除しますか？'}
+%br
+=link_to '一覧に戻る', users_path

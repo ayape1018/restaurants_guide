@@ -1,0 +1,12 @@
+%h1 Users#index
+%p Find me in app/views/users/show.html.erb
+-@users.each do |user|
+  名：
+  =link_to user.first_name, user_path(user)
+  %br
+  =link_to '編集する', edit_user_path(user)
+  %bt
+  =link_to '削除する', user_path(user), method: :delete, data: {confirm: '本当に削除しますか？'}
+
+  %hr
+=link_to '新規登録', new_user_path

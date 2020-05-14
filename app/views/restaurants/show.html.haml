@@ -1,0 +1,16 @@
+%h1 Restaurants#show
+%p Find me in app/views/restaurants/show.html.erb
+名前：
+=@restaurant.name
+%br
+住所：
+=@restaurant.address
+%br
+電話番号：
+=@restaurant.tel
+%br
+=link_to '編集する', edit_restaurant_path(@restaurant)
+%br
+=link_to '削除する', restaurant_path(@restaurant), method: :delete, data: {confirm: '本当に削除しますか？'}
+%br
+=link_to '一覧に戻る', restaurants_path
